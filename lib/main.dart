@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
+import 'utils/string.dart';
+import 'views/auth/login.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(const Tyamo());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Tyamo extends StatelessWidget {
+  const Tyamo({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Container(),
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: appName,
+      home: const Login(),
     );
   }
 }
