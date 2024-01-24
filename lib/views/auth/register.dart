@@ -6,10 +6,10 @@ import '../../utils/string.dart';
 import '../../widgets/auth/auth_heading.dart';
 import '../../widgets/auth/auth_text_field.dart';
 
-class Login extends StatelessWidget {
-  final RoundedLoadingButtonController _loginBtnController = RoundedLoadingButtonController();
+class Register extends StatelessWidget {
+  final RoundedLoadingButtonController _registerBtnController = RoundedLoadingButtonController();
 
-  Login({super.key});
+  Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class Login extends StatelessWidget {
           child: Column(
             children: [
               AuthHeading(
-                mainText: loginPageText1,
+                mainText: loginPageText2,
                 subText: loginPageText3,
                 logo: symbolImg,
                 fontSize: 18,
@@ -53,15 +53,23 @@ class Login extends StatelessWidget {
                 icon: Icons.password,
                 size: 15,
               ),
+              const SizedBox(height: 15),
+              AuthTextField(
+                keyboardType: TextInputType.text,
+                labelText: confirmPassword,
+                obscureText: true,
+                icon: Icons.lock_reset,
+                size: 15,
+              ),
               const SizedBox(height: 30),
               RoundedLoadingButton(
                 width: 2000,
                 borderRadius: 10,
-                controller: _loginBtnController,
+                controller: _registerBtnController,
                 color: loginBtnColor,
                 onPressed: () {},
                 child: Text(
-                  login,
+                  signUp,
                   style: GoogleFonts.poppins(
                     color: white,
                     fontSize: 16,
@@ -74,11 +82,11 @@ class Login extends StatelessWidget {
               Container(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  forgetPassword,
+                  signUpText,
                   style: GoogleFonts.poppins(
-                    color: forgetBtnColor,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
+                    color: grey2,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 8,
                     letterSpacing: 0.5,
                   ),
                 ),
@@ -88,7 +96,7 @@ class Login extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    noHaveAcc,
+                    alreadyRegister,
                     style: GoogleFonts.poppins(
                       color: grey,
                       fontWeight: FontWeight.w500,
@@ -97,7 +105,7 @@ class Login extends StatelessWidget {
                   ),
                   const SizedBox(width: 4),
                   Text(
-                    signUp,
+                    signIn,
                     style: GoogleFonts.poppins(
                       color: signUpBtnColor,
                       fontWeight: FontWeight.w500,

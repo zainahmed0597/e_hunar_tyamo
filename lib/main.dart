@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tyamo/views/auth/register.dart';
 
 import 'utils/string.dart';
 import 'views/auth/login.dart';
@@ -16,7 +17,7 @@ class Tyamo extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: appName,
-      home: const Login(),
+      home: Register(),
     );
   }
 }
