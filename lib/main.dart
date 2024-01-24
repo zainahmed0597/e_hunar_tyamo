@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tyamo/views/auth/register.dart';
-
+import '/views/auth/forget_password.dart';
 import 'utils/string.dart';
+
+import '/views/auth/register.dart';
 import 'views/auth/login.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class Tyamo extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: appName,
-      home: Register(),
+      home: ForgetPassword(),
     );
   }
 }
