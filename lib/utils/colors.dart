@@ -13,4 +13,5 @@ Color forgetBtnColor = const Color(0xffC1272D);
 Color grey = const Color(0xff5A5B5B);
 Color grey2 = const Color(0xff808080);
 Color signUpBtnColor = const Color(0xff2F76EA);
+Color bgProfileColor = const Color(0xff000221);
 
