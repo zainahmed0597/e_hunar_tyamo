@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:tyamo/views/auth/login.dart';
 import '../../utils/colors.dart';
 import '../../utils/string.dart';
 import '../../widgets/auth/auth_heading.dart';
@@ -24,6 +26,7 @@ class Register extends StatelessWidget {
             color: appBarFontColor,
           ),
         ),
+
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -115,12 +118,17 @@ class Register extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    Text(
-                      signIn,
-                      style: GoogleFonts.poppins(
-                        color: signUpBtnColor,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.fade, child: Login()));
+                      },
+                      child: Text(
+                        signIn,
+                        style: GoogleFonts.poppins(
+                          color: signUpBtnColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                        ),
                       ),
                     ),
                   ],

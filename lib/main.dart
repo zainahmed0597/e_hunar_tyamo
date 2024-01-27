@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tyamo/views/invitation/accept_invite.dart';
-import 'package:tyamo/views/invitation/invite_friend.dart';
 import 'utils/string.dart';
+import 'views/auth/login.dart';
 
 void main() {
   runApp(const Tyamo());
@@ -15,8 +14,9 @@ class Tyamo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
       title: appName,
-      home: const InviteFriend(),
+      home: Login(),
     );
   }
 }

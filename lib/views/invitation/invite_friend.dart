@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:tyamo/views/invitation/accept_invite.dart';
 import '../../utils/colors.dart';
 import '../../utils/string.dart';
 
@@ -17,13 +21,24 @@ class InviteFriend extends StatelessWidget {
           backgroundColor: white,
           centerTitle: true,
           leading: null,
-          actions: const [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: Icon(
-                Icons.person_outlined,
-                color: Colors.purple,
-                size: 35,
+          actions: [
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.rightToLeft,
+                    child: const AcceptInvite(),
+                  ),
+                );
+              },
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Icon(
+                  Icons.person_outlined,
+                  color: Colors.purple,
+                  size: 35,
+                ),
               ),
             ),
           ],

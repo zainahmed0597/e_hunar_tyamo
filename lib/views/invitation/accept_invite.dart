@@ -17,7 +17,11 @@ class AcceptInvite extends StatelessWidget {
           elevation: 0,
           backgroundColor: white,
           centerTitle: true,
-          leading: const Icon(Icons.arrow_back),
+          leading: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: const Icon(Icons.arrow_back)),
           title: SizedBox(
             height: 100,
             width: 100,
