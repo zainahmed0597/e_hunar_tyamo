@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tyamo/views/profile/profile_setup.dart';
+import 'package:tyamo/views/invitation/accept_invite.dart';
+import 'package:tyamo/views/invitation/invite_friend.dart';
 import 'utils/string.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class Tyamo extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: appName,
-      home: ProfileSetup(),
+      home: const InviteFriend(),
     );
   }
 }

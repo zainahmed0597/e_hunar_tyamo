@@ -69,7 +69,7 @@ class Login extends StatelessWidget {
                   width: 2000,
                   borderRadius: 10,
                   controller: _loginBtnController,
-                  color: loginBtnColor,
+                  color: cyan,
                   onPressed: () {},
                   child: Text(
                     login,

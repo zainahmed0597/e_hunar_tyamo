@@ -79,7 +79,7 @@ class ForgetPassword extends StatelessWidget {
                   width: 2000,
                   borderRadius: 10,
                   controller: _forgetPassBtnController,
-                  color: loginBtnColor,
+                  color: cyan,
                   onPressed: () {},
                   child: Text(
                     send,

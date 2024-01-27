@@ -4,6 +4,8 @@ String symbolImg = 'assets/images/symbol.png';
 String profileBg = 'assets/images/profile_bg.jpg';
 String forgetPasswordImg = 'assets/images/forgotPassword.png';
 String profileImg = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+String emptyImg = 'assets/images/empty.jpg';
+String inviteFriendImg = 'assets/images/invite_friend.jpg';
 
 // All Text here
 String appName = 'Tyamo';
@@ -14,6 +16,8 @@ String login = 'Login';
 String signUp = 'Sign Up';
 String signIn = 'Sign In';
 String send = 'Send';
+String accept = 'Accept';
+String decline = 'Decline';
 String save = 'Save';
 String email = 'Email';
 String password = 'Password';
@@ -27,3 +31,10 @@ String forgetPassText = 'To request for a new one, type your email address\n bel
 String profileSetupText = "Profile Setup";
 String yourName = 'Your Name';
 String yourUserName = 'Your User Name';
+String findYourFriendText = 'Find your friend';
+String typeUserName = 'Type an exact username';
+String searchFriendText = 'Search for friend on Tyamo or invite \nyour friend to Tyamo';
+String inviteFriendText = 'Invite a friend';
+String seeReceivedInviteText = 'See received invitation';
+String yourReceivedInviteText = 'Your received invitation are currently';
+String emptyText = 'Empty';

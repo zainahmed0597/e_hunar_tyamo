@@ -9,7 +9,7 @@ import '../../utils/string.dart';
 
 class ProfileSetup extends StatefulWidget {
 
-  ProfileSetup({super.key});
+  const ProfileSetup({super.key});
 
   @override
   State<ProfileSetup> createState() => _ProfileSetupState();
@@ -63,7 +63,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                     fontWeight: FontWeight.w700,
                     color: white,
                     fontSize: 18,
-                    letterSpacing: 2,
+                    letterSpacing: 1,
                   ),
                 ),
               ),
@@ -74,7 +74,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                     const SizedBox(height: 60),
                     CircularProfileAvatar(
                       profileImg,
-                      backgroundColor: loginBtnColor,
+                      backgroundColor: cyan,
                       initialsText: Text(
                         '+',
                         style: GoogleFonts.poppins(
@@ -114,7 +114,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                              color: isMale ? loginBtnColor: Colors.grey,
+                              color: isMale ? cyan: Colors.grey,
                               shape: BoxShape.circle,
                               boxShadow: const [
                                 BoxShadow(
@@ -163,7 +163,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       width: 2000,
                       borderRadius: 10,
                       controller: _profileSetupBtnController,
-                      color: loginBtnColor,
+                      color: cyan,
                       onPressed: () {},
                       child: Text(
                         save,

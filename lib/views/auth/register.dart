@@ -77,7 +77,7 @@ class Register extends StatelessWidget {
                   width: 2000,
                   borderRadius: 10,
                   controller: _registerBtnController,
-                  color: loginBtnColor,
+                  color: cyan,
                   onPressed: () {},
                   child: Text(
                     signUp,
