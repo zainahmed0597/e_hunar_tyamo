@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 import '../../utils/colors.dart';
@@ -46,12 +47,12 @@ class ForgetPassword extends StatelessWidget {
                   mainText: forgetYourPassword,
                   logo: symbolImg,
                   subText: '',
-                  fontSize: 19,
-                  logoSize: 24,
+                  fontSize: 18.sp,
+                  logoSize: 18.sp,
                 ),
                 SizedBox(
-                  height: 150,
-                  width: 150,
+                  height: 20.h,
+                  width: 40.w,
                   child: Image.asset(
                     forgetPasswordImg,
                     filterQuality: FilterQuality.high,
@@ -63,7 +64,7 @@ class ForgetPassword extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w500,
-                    fontSize: 13,
+                    fontSize: 14.sp,
                   ),
                 ),
                 const SizedBox(height: 40),
@@ -72,7 +73,7 @@ class ForgetPassword extends StatelessWidget {
                   labelText: email,
                   obscureText: false,
                   icon: Icons.alternate_email,
-                  size: 15,
+                  size: 15.sp,
                 ),
                 const SizedBox(height: 30),
                 RoundedLoadingButton(
@@ -85,7 +86,7 @@ class ForgetPassword extends StatelessWidget {
                     send,
                     style: GoogleFonts.poppins(
                       color: white,
-                      fontSize: 16,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 1,
                     ),

@@ -4,6 +4,7 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:tyamo/utils/colors.dart';
 import 'package:tyamo/views/invitation/invite_friend.dart';
@@ -56,7 +57,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
             children: [
               Container(
                 alignment: Alignment.center,
-                height: 50,
+                height: 27.sp,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: bgProfileColor,
@@ -66,7 +67,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w700,
                     color: white,
-                    fontSize: 18,
+                    fontSize: 16.sp,
                     letterSpacing: 1,
                   ),
                 ),
@@ -83,7 +84,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                         '+',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           color: white,
                         ),
                       ),
@@ -94,7 +95,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       labelText: yourName,
                       obscureText: false,
                       icon: Icons.face,
-                      size: 16,
+                      size: 15.sp,
                     ),
                     const SizedBox(height: 20),
                     AuthTextField(
@@ -102,7 +103,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       labelText: yourUserName,
                       obscureText: false,
                       icon: Icons.alternate_email,
-                      size: 16,
+                      size: 15.sp,
                     ),
                     const SizedBox(height: 80),
                     Row(
@@ -163,30 +164,33 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       ],
                     ),
                     const SizedBox(height: 40),
-                    RoundedLoadingButton(
-                      width: 2000,
-                      borderRadius: 10,
-                      controller: _profileSetupBtnController,
-                      color: cyan,
-                      onPressed: () {
-                        Timer(const Duration(seconds: 3), () {
-                          _profileSetupBtnController.success();
-                        });
-                        Navigator.pushReplacement(
-                          context,
-                          PageTransition(
-                            type: PageTransitionType.fade,
-                            child: const InviteFriend(),
+                    Hero(
+                      tag: 'auth',
+                      child: RoundedLoadingButton(
+                        width: 2000,
+                        borderRadius: 10,
+                        controller: _profileSetupBtnController,
+                        color: cyan,
+                        onPressed: () {
+                          Timer(const Duration(seconds: 3), () {
+                            _profileSetupBtnController.success();
+                          });
+                          Navigator.pushReplacement(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              child: const InviteFriend(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          next,
+                          style: GoogleFonts.poppins(
+                            color: white,
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 1,
                           ),
-                        );
-                      },
-                      child: Text(
-                        next,
-                        style: GoogleFonts.poppins(
-                          color: white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 1,
                         ),
                       ),
                     ),

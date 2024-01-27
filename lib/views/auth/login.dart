@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
@@ -51,8 +51,8 @@ class Login extends StatelessWidget {
                   mainText: loginPageText1,
                   subText: loginPageText3,
                   logo: symbolImg,
-                  fontSize: 18,
-                  logoSize: 24,
+                  fontSize: 18.sp,
+                  logoSize: 18.sp,
                 ),
                 const SizedBox(height: 60),
                 AuthTextField(
@@ -60,7 +60,7 @@ class Login extends StatelessWidget {
                   labelText: email,
                   obscureText: false,
                   icon: Icons.alternate_email,
-                  size: 15,
+                  size: 15.sp,
                 ),
                 const SizedBox(height: 15),
                 AuthTextField(
@@ -68,33 +68,36 @@ class Login extends StatelessWidget {
                   labelText: password,
                   obscureText: true,
                   icon: Icons.password,
-                  size: 15,
+                  size: 15.sp,
                 ),
                 const SizedBox(height: 30),
-                RoundedLoadingButton(
-                  width: 2000,
-                  borderRadius: 10,
-                  controller: _loginBtnController,
-                  color: cyan,
-                  onPressed: () {
-                    Timer(const Duration(seconds: 3), () {
-                      _loginBtnController.success();
-                    });
-                    Navigator.pushReplacement(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.fade,
-                        child: const ProfileSetup(),
+                Hero(
+                  tag: 'auth',
+                  child: RoundedLoadingButton(
+                    width: 2000,
+                    borderRadius: 10,
+                    controller: _loginBtnController,
+                    color: cyan,
+                    onPressed: () {
+                      Timer(const Duration(seconds: 3), () {
+                        _loginBtnController.success();
+                      });
+                      Navigator.pushReplacement(
+                        context,
+                        PageTransition(
+                          type: PageTransitionType.fade,
+                          child: const ProfileSetup(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      login,
+                      style: GoogleFonts.poppins(
+                        color: white,
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1,
                       ),
-                    );
-                  },
-                  child: Text(
-                    login,
-                    style: GoogleFonts.poppins(
-                      color: white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 1,
                     ),
                   ),
                 ),
@@ -114,9 +117,9 @@ class Login extends StatelessWidget {
                     child: Text(
                       forgetPassword,
                       style: GoogleFonts.poppins(
-                        color: forgetBtnColor,
+                        color: red,
                         fontWeight: FontWeight.normal,
-                        fontSize: 12,
+                        fontSize: 13.sp,
                         letterSpacing: 0.5,
                       ),
                     ),
@@ -131,7 +134,7 @@ class Login extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         color: grey,
                         fontWeight: FontWeight.w500,
-                        fontSize: 12,
+                        fontSize: 13.sp,
                       ),
                     ),
                     const SizedBox(width: 4),
@@ -148,9 +151,9 @@ class Login extends StatelessWidget {
                       child: Text(
                         signUp,
                         style: GoogleFonts.poppins(
-                          color: signUpBtnColor,
+                          color: blue,
                           fontWeight: FontWeight.w500,
-                          fontSize: 13,
+                          fontSize: 14.sp,
                         ),
                       ),
                     ),

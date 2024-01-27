@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:tyamo/views/auth/login.dart';
 import '../../utils/colors.dart';
@@ -48,8 +49,8 @@ class Register extends StatelessWidget {
                   mainText: loginPageText2,
                   subText: loginPageText3,
                   logo: symbolImg,
-                  fontSize: 18,
-                  logoSize: 24,
+                  fontSize: 18.sp,
+                  logoSize: 18.sp,
                 ),
                 const SizedBox(height: 60),
                 AuthTextField(
@@ -57,7 +58,7 @@ class Register extends StatelessWidget {
                   labelText: email,
                   obscureText: false,
                   icon: Icons.alternate_email,
-                  size: 15,
+                  size: 15.sp,
                 ),
                 const SizedBox(height: 15),
                 AuthTextField(
@@ -65,7 +66,7 @@ class Register extends StatelessWidget {
                   labelText: password,
                   obscureText: true,
                   icon: Icons.password,
-                  size: 15,
+                  size: 15.sp,
                 ),
                 const SizedBox(height: 15),
                 AuthTextField(
@@ -73,22 +74,25 @@ class Register extends StatelessWidget {
                   labelText: confirmPassword,
                   obscureText: true,
                   icon: Icons.lock_reset,
-                  size: 15,
+                  size: 15.sp,
                 ),
                 const SizedBox(height: 30),
-                RoundedLoadingButton(
-                  width: 2000,
-                  borderRadius: 10,
-                  controller: _registerBtnController,
-                  color: cyan,
-                  onPressed: () {},
-                  child: Text(
-                    signUp,
-                    style: GoogleFonts.poppins(
-                      color: white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 1,
+                Hero(
+                  tag: 'auth',
+                  child: RoundedLoadingButton(
+                    width: 2000,
+                    borderRadius: 10,
+                    controller: _registerBtnController,
+                    color: cyan,
+                    onPressed: () {},
+                    child: Text(
+                      signUp,
+                      style: GoogleFonts.poppins(
+                        color: white,
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1,
+                      ),
                     ),
                   ),
                 ),
@@ -100,7 +104,7 @@ class Register extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       color: grey2,
                       fontWeight: FontWeight.w500,
-                      fontSize: 8,
+                      fontSize: 12.sp,
                       letterSpacing: 0.5,
                     ),
                   ),
@@ -114,7 +118,7 @@ class Register extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         color: grey,
                         fontWeight: FontWeight.w500,
-                        fontSize: 12,
+                        fontSize: 13.sp,
                       ),
                     ),
                     const SizedBox(width: 4),
@@ -125,9 +129,9 @@ class Register extends StatelessWidget {
                       child: Text(
                         signIn,
                         style: GoogleFonts.poppins(
-                          color: signUpBtnColor,
+                          color: blue,
                           fontWeight: FontWeight.w500,
-                          fontSize: 13,
+                          fontSize: 14.sp,
                         ),
                       ),
                     ),
