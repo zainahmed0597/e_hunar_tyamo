@@ -27,7 +27,6 @@ class Register extends StatelessWidget {
             color: appBarFontColor,
           ),
         ),
-
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -123,8 +122,14 @@ class Register extends StatelessWidget {
                     ),
                     const SizedBox(width: 4),
                     GestureDetector(
-                      onTap: (){
-                        Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.fade, child: Login()));
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.fade,
+                            child: Login(),
+                          ),
+                        );
                       },
                       child: Text(
                         signIn,
