@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
@@ -163,10 +161,7 @@ class InviteFriend extends StatelessWidget {
               child: Text(
                 inviteFriendText,
                 style: GoogleFonts.poppins(
-                  color: white,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.sp
-                ),
+                    color: white, fontWeight: FontWeight.w600, fontSize: 14.sp),
               ),
             ),
           ],
