@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../utils/colors.dart';
 import '../../utils/string.dart';
 import '../../widgets/home/drawer_list_tile.dart';
+import 'dashboard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       },
       children: [
         Container(color: Colors.black),
-        Container(color: Colors.cyan),
+        const Dashboard(),
         Container(color: Colors.green),
       ],
     );
@@ -117,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Zain Ahmed',
+                                userName,
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.poppins(
                                   fontSize: 18,
@@ -126,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               Text(
-                                'xano@tyamo.com',
+                                userEmail,
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.poppins(
                                   fontSize: 12,
