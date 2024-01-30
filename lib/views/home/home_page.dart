@@ -23,9 +23,9 @@ class _HomePageState extends State<HomePage> {
 
   final List<IconData> icons = [FontAwesomeIcons.circleUser, FontAwesomeIcons.house, FontAwesomeIcons.bell];
 
-  int page = 0;
-  int pageView = 0;
-  PageController pageController = PageController(initialPage: 0);
+  int page = 1;
+  int pageView = 1;
+  PageController pageController = PageController(initialPage: 1);
 
   Widget pageViewSection() {
     return PageView(

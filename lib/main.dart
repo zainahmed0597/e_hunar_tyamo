@@ -18,7 +18,8 @@ class Tyamo extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
         title: appName,
-        home: HomePage(),
+        // home: const ProfileSettings(),
+        home: const HomePage(),
       );
     });
   }

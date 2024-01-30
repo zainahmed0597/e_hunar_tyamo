@@ -17,6 +17,7 @@ Color blue2 = const Color(0xff4C9CFF);
 Color blue3 = const Color(0xff004C99);
 Color bgProfileColor = const Color(0xff000221);
 Color purple = const Color(0xff8C47FB);
+Color purple2 = const Color(0xff671AFC);
 Color gradient1 = const Color(0xff4FC174);
 Color gradient2 = const Color(0xff00D7A9);
 Color gradient3 = const Color(0xffF7DB00);
