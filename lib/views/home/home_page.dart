@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../utils/colors.dart';
 import '../../utils/string.dart';
 import '../../widgets/home/drawer_list_tile.dart';
+import '../profile/profile.dart';
 import 'dashboard.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,9 +23,9 @@ class _HomePageState extends State<HomePage> {
 
   final List<IconData> icons = [FontAwesomeIcons.circleUser, FontAwesomeIcons.house, FontAwesomeIcons.bell];
 
-  int page = 1;
-  int pageView = 1;
-  PageController pageController = PageController(initialPage: 1);
+  int page = 0;
+  int pageView = 0;
+  PageController pageController = PageController(initialPage: 0);
 
   Widget pageViewSection() {
     return PageView(
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         });
       },
       children: [
-        Container(color: Colors.black),
+        const Profile(),
         const Dashboard(),
         Container(color: Colors.green),
       ],
