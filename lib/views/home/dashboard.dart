@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tyamo/utils/colors.dart';
-
 import '../../utils/string.dart';
 import '../../widgets/home/dashboard/dashboard_gradient_feature.dart';
 
@@ -30,7 +29,7 @@ class Dashboard extends StatelessWidget {
               ),
             ),
           ),
-      
+
           const SizedBox(height: 10),
           // Your Friend text here
           Container(
@@ -47,7 +46,7 @@ class Dashboard extends StatelessWidget {
               ),
             ),
           ),
-      
+
           // Card custom widget here
           Container(
             padding: const EdgeInsets.all(10),
@@ -221,7 +220,7 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-      
+
           // 3 widgets 'Device', 'Gallery', 'Moods' here
           Row(
             children: [
@@ -249,7 +248,7 @@ class Dashboard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-      
+
           // Our Feature text here
           Container(
             padding: const EdgeInsets.only(left: 20),
@@ -266,7 +265,7 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-      
+
           // OurFeature btn widgets here
           Row(
             children: [

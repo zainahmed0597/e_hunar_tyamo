@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:tyamo/views/feature/user_status/user_status.dart';
 import 'utils/string.dart';
-import 'views/home/home_page.dart';
 
 void main() {
   runApp(const Tyamo());
@@ -18,8 +18,8 @@ class Tyamo extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
         title: appName,
-        // home: const ProfileSettings(),
-        home: const HomePage(),
+        home: UserStatus(),
+        // home: const HomePage(),
       );
     });
   }
