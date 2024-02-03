@@ -48,4 +48,6 @@ Color gradient27 = const Color(0xff989898);
 Color gradient28 = const Color(0xff84abe4);
 Color gradient29 = const Color(0xff55CAC4);
 Color gradient30 = const Color(0xff8e57fb);
+Color gradient31 = const Color(0xFFFFA400);
+Color gradient32 = const Color(0xFF373A36);
 // Color name = const Color(0xff);
