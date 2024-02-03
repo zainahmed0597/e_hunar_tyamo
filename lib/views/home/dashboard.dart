@@ -227,7 +227,7 @@ class Dashboard extends StatelessWidget {
               Flexible(
                 child: DashboardGradientFeature(
                   iconWidget: Icons.phone_iphone,
-                  btnText: device,
+                  btnText: deviceInfoShort,
                   widgetBgColor: [gradient1, gradient2],
                 ),
               ),

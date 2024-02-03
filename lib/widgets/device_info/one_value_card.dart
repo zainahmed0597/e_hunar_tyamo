@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../../utils/colors.dart';
+import '../../utils/colors.dart';
 
 class OneValueCard extends StatelessWidget {
   final String value;
   final Color clr;
+  final Color? textClr;
   const OneValueCard({
-    super.key, required this.value, required this.clr,
+    super.key, required this.value, required this.clr, this.textClr,
   });
 
   @override
@@ -29,7 +30,7 @@ class OneValueCard extends StatelessWidget {
                     style: GoogleFonts.nunito(
                       fontWeight: FontWeight.w900,
                       fontSize: 15,
-                      color: white,
+                      color:textClr ?? white,
                     ),
                     textAlign: TextAlign.center,
                   ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../utils/colors.dart';
+import '../../utils/colors.dart';
 
 class GradientButton extends StatelessWidget {
   final String title;
@@ -20,7 +20,7 @@ class GradientButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(6),
+      padding: const EdgeInsets.all(1.5),
       width: double.infinity,
       child: Card(
         elevation: 10,

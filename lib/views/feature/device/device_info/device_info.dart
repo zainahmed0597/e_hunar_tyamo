@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tyamo/widgets/global_widgets/top_banner.dart';
-import '../../../utils/colors.dart';
-import '../../../utils/string.dart';
-import 'gradient_button.dart';
+import '../../../../utils/colors.dart';
+import '../../../../utils/string.dart';
+import '../../../../widgets/device_info/gradient_button.dart';
 
 class DeviceInfo extends StatelessWidget {
   const DeviceInfo({super.key});
