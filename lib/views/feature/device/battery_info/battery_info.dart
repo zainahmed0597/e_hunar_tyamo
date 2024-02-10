@@ -5,7 +5,7 @@ import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:tyamo/utils/colors.dart';
 
 import '../../../../utils/string.dart';
-import '../../../../widgets/device_info/battery_info_two_value_card.dart';
+import '../../../../widgets/feature/device_info/battery_info_two_value_card.dart';
 
 class BatteryInfo extends StatelessWidget {
   const BatteryInfo({super.key});

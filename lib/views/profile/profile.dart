@@ -77,7 +77,7 @@ class _ProfileState extends State<Profile> {
 
           // User text here
           Text(
-            userName,
+            userFullName,
             style: GoogleFonts.nunito(
               fontWeight: FontWeight.w600,
               fontSize: 18,

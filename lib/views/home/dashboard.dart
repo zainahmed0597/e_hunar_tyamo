@@ -98,7 +98,7 @@ class Dashboard extends StatelessWidget {
                                   ),
                                   const SizedBox(width: 7),
                                   Text(
-                                    userName,
+                                    userFullName,
                                     style: GoogleFonts.nunito(
                                         fontSize: 16, fontWeight: FontWeight.w800, color: black),
                                   ),

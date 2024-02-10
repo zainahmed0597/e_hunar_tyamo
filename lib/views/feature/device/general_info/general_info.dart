@@ -4,8 +4,9 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tyamo/utils/colors.dart';
 
 import '../../../../utils/string.dart';
-import '../../../../widgets/device_info/battery_info_two_value_card.dart';
-import '../../../../widgets/device_info/general_info_four_value_card.dart';
+import '../../../../widgets/feature/device_info/battery_info_two_value_card.dart';
+import '../../../../widgets/feature/device_info/general_info_four_value_card.dart';
+
 
 class GeneralInfo extends StatelessWidget {
   const GeneralInfo({super.key});

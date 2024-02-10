@@ -4,8 +4,9 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../utils/colors.dart';
 import '../../../utils/string.dart';
-import '../../../widgets/device_info/two_value_card.dart';
-import '../../../widgets/device_info/one_value_card.dart';
+import '../../../widgets/feature/device_info/one_value_card.dart';
+import '../../../widgets/feature/device_info/two_value_card.dart';
+
 
 class UserStatus extends StatefulWidget {
   const UserStatus({super.key});

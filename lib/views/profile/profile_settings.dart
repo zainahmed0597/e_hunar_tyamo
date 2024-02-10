@@ -95,7 +95,7 @@ class ProfileSettings extends StatelessWidget {
 
                               // Name text here
                               Text(
-                                userName,
+                                userFullName,
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.nunito(
                                   fontSize: 18,

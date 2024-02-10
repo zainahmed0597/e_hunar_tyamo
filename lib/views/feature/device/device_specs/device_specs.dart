@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tyamo/widgets/device_info/two_value_card.dart';
 
 import '../../../../utils/colors.dart';
 import '../../../../utils/string.dart';
+import '../../../../widgets/feature/device_info/two_value_card.dart';
 
 class DeviceSpecs extends StatelessWidget {
   const DeviceSpecs({super.key});
