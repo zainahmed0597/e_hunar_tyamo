@@ -1,11 +1,8 @@
-import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tyamo/utils/colors.dart';
-import 'package:awesome_dialog/awesome_dialog.dart';
 import '../../../utils/string.dart';
 
 import '../../../widgets/feature/album/gallery_header.dart';
@@ -51,8 +48,7 @@ class MyAlbum extends StatelessWidget {
                       ),
                       trailingIcon: const Icon(Icons.open_in_new),
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const AlbumPost()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumPost()));
                       }),
                   FocusedMenuItem(
                       title: Text(
@@ -69,10 +65,14 @@ class MyAlbum extends StatelessWidget {
                 blurSize: 5.0,
                 menuItemExtent: 45,
                 menuBoxDecoration: const BoxDecoration(
-                    color: Colors.grey, borderRadius: BorderRadius.all(Radius.circular(15.0))),
-
-                duration: const Duration(milliseconds: 100),
-
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      15.0,
+                    ),
+                  ),
+                ),
+                duration: const Duration(milliseconds: 50),
                 blurBackgroundColor: Colors.black54,
                 animateMenuItems: true,
                 openWithTap: false,
@@ -87,7 +87,9 @@ class MyAlbum extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const AlbumPost()),
+                      MaterialPageRoute(
+                        builder: (context) => const AlbumPost(),
+                      ),
                     );
                   },
                   child: ClipRRect(
@@ -109,4 +111,3 @@ class MyAlbum extends StatelessWidget {
     );
   }
 }
-

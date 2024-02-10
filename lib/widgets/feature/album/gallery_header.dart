@@ -150,62 +150,65 @@ class GalleryHeader extends StatelessWidget {
                 ),
                 isEditable
                     ? GestureDetector(
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        gradient: LinearGradient(colors: [gradient35, gradient36])),
-                    child: Icon(
-                      Icons.edit,
-                      color: white,
-                    ),
-                  ),
-                  onTap: () {
-                    // Popup dialog here
-                    AwesomeDialog(
-                        context: context,
-                        dialogType: DialogType.noHeader,
-                        animType: AnimType.scale,
-                        body: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: TextField(
-                              keyboardType: TextInputType.multiline,
-                              maxLines: null,
-                              minLines: 2,
-                              decoration: InputDecoration(
-                                labelText: albumDescription,
-                                labelStyle: GoogleFonts.nunito(
-                                  color: black,
-                                ),
-                                fillColor: black,
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18),
-                                  borderSide: const BorderSide(
-                                    color: Colors.green,
-                                  ),
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18),
-                                  borderSide: const BorderSide(
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18),
-                                  borderSide: const BorderSide(
-                                    color: Colors.deepPurple,
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            gradient: LinearGradient(
+                              colors: [gradient35, gradient36],
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.edit,
+                            color: white,
+                          ),
+                        ),
+                        onTap: () {
+                          // Popup dialog here
+                          AwesomeDialog(
+                            context: context,
+                            dialogType: DialogType.noHeader,
+                            animType: AnimType.scale,
+                            body: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: TextField(
+                                  keyboardType: TextInputType.multiline,
+                                  maxLines: null,
+                                  minLines: 2,
+                                  decoration: InputDecoration(
+                                    labelText: enterNewCaption,
+                                    labelStyle: GoogleFonts.nunito(
+                                      color: black,
+                                    ),
+                                    fillColor: black,
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(18),
+                                      borderSide: const BorderSide(
+                                        color: Colors.green,
+                                      ),
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(18),
+                                      borderSide: const BorderSide(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(18),
+                                      borderSide: const BorderSide(
+                                        color: Colors.deepPurple,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        ),
-                        btnOkOnPress: () {})
-                        .show();
-                  },
-                )
+                            btnOkOnPress: () {},
+                          ).show();
+                        },
+                      )
                     : Container(),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,

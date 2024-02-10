@@ -33,7 +33,9 @@ class FriendAlbum extends StatelessWidget {
             shrinkWrap: true,
             crossAxisCount: 4,
             itemCount: 2,
-            staggeredTileBuilder: (int index) => StaggeredTile.count(2, index.isEven ? 2 : 3),
+            staggeredTileBuilder: (int index) => StaggeredTile.count(
+              2,
+              index.isEven ? 2 : 3),
             mainAxisSpacing: 10.0,
             crossAxisSpacing: 12.0,
             itemBuilder: (BuildContext context, int index) {
@@ -47,8 +49,12 @@ class FriendAlbum extends StatelessWidget {
                       ),
                       trailingIcon: const Icon(Icons.open_in_new),
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const AlbumPost()));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AlbumPost(),
+                          ),
+                        );
                       }),
                   FocusedMenuItem(
                       title: Text(
@@ -65,10 +71,12 @@ class FriendAlbum extends StatelessWidget {
                 blurSize: 5.0,
                 menuItemExtent: 45,
                 menuBoxDecoration: const BoxDecoration(
-                    color: Colors.grey, borderRadius: BorderRadius.all(Radius.circular(15.0))),
-      
-                duration: const Duration(milliseconds: 100),
-      
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15.0),
+                  ),
+                ),
+                duration: const Duration(milliseconds: 50),
                 blurBackgroundColor: Colors.black54,
                 animateMenuItems: true,
                 openWithTap: false,
@@ -77,7 +85,7 @@ class FriendAlbum extends StatelessWidget {
                 // Offset value to show menuItem from the selected item
                 bottomOffsetHeight: 80.0,
                 // Offset height to consider, for showing the menu item ( for example bottom navigation bar), so that the popup menu will be shown on top of selected item.
-      
+
                 onPressed: () {},
                 child: GestureDetector(
                   onTap: () {
