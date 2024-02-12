@@ -14,6 +14,8 @@ import '../../../utils/string.dart';
 import '../../../widgets/global_widgets/logo_app_bar.dart';
 import 'package:flutter_balloon_slider/flutter_balloon_slider.dart';
 
+import 'image_view.dart';
+
 class AlbumPost extends StatelessWidget {
   const AlbumPost({super.key});
 
@@ -54,7 +56,8 @@ class AlbumPost extends StatelessWidget {
                             children: [
                               // Custom AppBar here
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   // Back Screen Button here
                                   GestureDetector(
@@ -73,7 +76,8 @@ class AlbumPost extends StatelessWidget {
                                   const LogoAppBar(),
                                   // Profile Image here
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 18, top: 10, bottom: 10),
+                                    padding: const EdgeInsets.only(
+                                        right: 18, top: 10, bottom: 10),
                                     child: CircularProfileAvatar(
                                       profileImg,
                                       backgroundColor: cyan,
@@ -101,16 +105,28 @@ class AlbumPost extends StatelessWidget {
                               ),
                               const SizedBox(height: 6),
                               // Custom Responsive Image here
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: SizedBox(
-                                  height: size.height * 0.449,
-                                  width: size.width * 0.92,
-                                  child: Image.network(
-                                    bg2Network,
-                                    fit: BoxFit.cover,
+                              GestureDetector(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: SizedBox(
+                                    height: size.height * 0.449,
+                                    width: size.width * 0.92,
+                                    child: Image.network(
+                                      bg2Network,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => ImageView(
+                                        url: bg2Network,
+                                      ),
+                                    ),
+                                  );
+                                },
                               ),
                               const SizedBox(height: 13),
                               // Slider here
@@ -118,15 +134,18 @@ class AlbumPost extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: white,
                                     // Slider radius here
-                                    borderRadius: const BorderRadius.all(Radius.circular(14))),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(14))),
                                 // Size box of slider
                                 child: SizedBox(
                                   height: 50,
                                   width: size.width * 0.71,
                                   // Row of heart and slider
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       //Heart Icon here
                                       const Icon(
@@ -159,7 +178,8 @@ class AlbumPost extends StatelessWidget {
                   // Second half here
                   // Comment Area here
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,16 +220,23 @@ class AlbumPost extends StatelessWidget {
                                         decoration: InputDecoration(
                                           fillColor: black,
                                           labelText: enterNewCaption,
-                                          labelStyle: GoogleFonts.nunito(color: black),
+                                          labelStyle:
+                                              GoogleFonts.nunito(color: black),
                                           enabledBorder: OutlineInputBorder(
-                                              borderRadius: BorderRadius.circular(18),
-                                              borderSide: BorderSide(color: purple2)),
+                                              borderRadius:
+                                                  BorderRadius.circular(18),
+                                              borderSide:
+                                                  BorderSide(color: purple2)),
                                           border: OutlineInputBorder(
-                                              borderRadius: BorderRadius.circular(18),
-                                              borderSide: const BorderSide(color: Colors.black)),
+                                              borderRadius:
+                                                  BorderRadius.circular(18),
+                                              borderSide: const BorderSide(
+                                                  color: Colors.black)),
                                           focusedBorder: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(18),
-                                            borderSide: BorderSide(color: purple2),
+                                            borderRadius:
+                                                BorderRadius.circular(18),
+                                            borderSide:
+                                                BorderSide(color: purple2),
                                           ),
                                         ),
                                         keyboardType: TextInputType.multiline,
@@ -244,12 +271,14 @@ class AlbumPost extends StatelessWidget {
                           // menu items here as many you want
                           menuItems: [
                             FocusedMenuItem(
-                              title: Text(copy, style: GoogleFonts.nunito(color: black)),
+                              title: Text(copy,
+                                  style: GoogleFonts.nunito(color: black)),
                               trailingIcon: const Icon(FontAwesomeIcons.copy),
                               onPressed: () {},
                             ),
                             FocusedMenuItem(
-                              title: Text(edit, style: GoogleFonts.nunito(color: white)),
+                              title: Text(edit,
+                                  style: GoogleFonts.nunito(color: white)),
                               backgroundColor: Colors.red,
                               trailingIcon: Icon(
                                 FontAwesomeIcons.penToSquare,
@@ -271,16 +300,23 @@ class AlbumPost extends StatelessWidget {
                                         decoration: InputDecoration(
                                           fillColor: black,
                                           labelText: enterNewCaption,
-                                          labelStyle: GoogleFonts.nunito(color: black),
+                                          labelStyle:
+                                              GoogleFonts.nunito(color: black),
                                           enabledBorder: OutlineInputBorder(
-                                              borderRadius: BorderRadius.circular(18),
-                                              borderSide: BorderSide(color: purple2)),
+                                              borderRadius:
+                                                  BorderRadius.circular(18),
+                                              borderSide:
+                                                  BorderSide(color: purple2)),
                                           border: OutlineInputBorder(
-                                              borderRadius: BorderRadius.circular(18),
-                                              borderSide: const BorderSide(color: Colors.black)),
+                                              borderRadius:
+                                                  BorderRadius.circular(18),
+                                              borderSide: const BorderSide(
+                                                  color: Colors.black)),
                                           focusedBorder: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(18),
-                                            borderSide: BorderSide(color: purple2),
+                                            borderRadius:
+                                                BorderRadius.circular(18),
+                                            borderSide:
+                                                BorderSide(color: purple2),
                                           ),
                                         ),
                                         keyboardType: TextInputType.multiline,
@@ -345,12 +381,15 @@ class AlbumPost extends StatelessWidget {
                               onPressed: () {},
                               menuItems: [
                                 FocusedMenuItem(
-                                  title: Text(copy, style: GoogleFonts.nunito(color: black)),
-                                  trailingIcon: const Icon(FontAwesomeIcons.copy),
+                                  title: Text(copy,
+                                      style: GoogleFonts.nunito(color: black)),
+                                  trailingIcon:
+                                      const Icon(FontAwesomeIcons.copy),
                                   onPressed: () {},
                                 ),
                                 FocusedMenuItem(
-                                  title: Text(edit, style: GoogleFonts.nunito(color: white)),
+                                  title: Text(edit,
+                                      style: GoogleFonts.nunito(color: white)),
                                   backgroundColor: Colors.red,
                                   trailingIcon: Icon(
                                     FontAwesomeIcons.penToSquare,
@@ -372,19 +411,27 @@ class AlbumPost extends StatelessWidget {
                                             decoration: InputDecoration(
                                               fillColor: black,
                                               labelText: enterNewCaption,
-                                              labelStyle: GoogleFonts.nunito(color: black),
+                                              labelStyle: GoogleFonts.nunito(
+                                                  color: black),
                                               enabledBorder: OutlineInputBorder(
-                                                  borderRadius: BorderRadius.circular(18),
-                                                  borderSide: BorderSide(color: purple2)),
+                                                  borderRadius:
+                                                      BorderRadius.circular(18),
+                                                  borderSide: BorderSide(
+                                                      color: purple2)),
                                               border: OutlineInputBorder(
-                                                  borderRadius: BorderRadius.circular(18),
-                                                  borderSide: const BorderSide(color: Colors.black)),
+                                                  borderRadius:
+                                                      BorderRadius.circular(18),
+                                                  borderSide: const BorderSide(
+                                                      color: Colors.black)),
                                               focusedBorder: OutlineInputBorder(
-                                                borderRadius: BorderRadius.circular(18),
-                                                borderSide: BorderSide(color: purple2),
+                                                borderRadius:
+                                                    BorderRadius.circular(18),
+                                                borderSide:
+                                                    BorderSide(color: purple2),
                                               ),
                                             ),
-                                            keyboardType: TextInputType.multiline,
+                                            keyboardType:
+                                                TextInputType.multiline,
                                             minLines: 1,
                                             maxLines: null,
                                             controller: null,
@@ -444,7 +491,8 @@ class AlbumPost extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16.0,bottom: 16.0),
+              padding:
+                  const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Expanded(

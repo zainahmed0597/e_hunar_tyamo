@@ -8,6 +8,7 @@ String emptyImg = 'assets/images/empty.jpg';
 String inviteFriendImg = 'assets/images/invite_friend.jpg';
 String bg1 = 'assets/images/bg1.png';
 String bg2Network = 'https://img.freepik.com/free-vector/abstract-hand-painted-sunny-landscape-background-design_1048-18618.jpg?w=740&t=st=1707513753~exp=1707514353~hmac=b3ef9588f3f230d0dda13a087b586b3e2b9574b8b411cd3ab9cdb635ff028dcc';
+String bg3Network = 'https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
 // All Int here
 int totalUploadValue = 0;
@@ -191,6 +192,7 @@ String delete = "Delete";
 String totalOpened = 'Total Opened';
 String description = 'Tell your partner what this album means to you!';
 String caption = 'Caption';
+String writeACaption = 'Write a caption';
 String confirm = 'Confirm';
 String copy = 'Copy';
 String edit = 'Edit';
@@ -198,3 +200,4 @@ String blabla = 'text here bla bla bla bla bla bla bla bla bla bla bla bla bla b
 String comment = 'Comment';
 String comment1 = 'This is my comment';
 String oneMinAgo = '1 min ago';
+String postPic = 'Post Picture';

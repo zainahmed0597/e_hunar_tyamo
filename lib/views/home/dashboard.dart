@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tyamo/utils/colors.dart';
 import '../../utils/string.dart';
 import '../../widgets/home/dashboard/dashboard_gradient_feature.dart';
+import '../feature/album/album_main.dart';
+import '../feature/device/device_info/device_info.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -225,17 +227,37 @@ class Dashboard extends StatelessWidget {
           Row(
             children: [
               Flexible(
-                child: DashboardGradientFeature(
-                  iconWidget: Icons.phone_iphone,
-                  btnText: deviceInfoShort,
-                  widgetBgColor: [gradient1, gradient2],
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DeviceInfo(),
+                      ),
+                    );
+                  },
+                  child: DashboardGradientFeature(
+                    iconWidget: Icons.phone_iphone,
+                    btnText: deviceInfoShort,
+                    widgetBgColor: [gradient1, gradient2],
+                  ),
                 ),
               ),
               Flexible(
-                child: DashboardGradientFeature(
-                  iconWidget: Icons.photo_library,
-                  btnText: gallery,
-                  widgetBgColor: [gradient3, gradient4],
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AlbumMain(),
+                      ),
+                    );
+                  },
+                  child: DashboardGradientFeature(
+                    iconWidget: Icons.photo_library,
+                    btnText: gallery,
+                    widgetBgColor: [gradient3, gradient4],
+                  ),
                 ),
               ),
               Flexible(

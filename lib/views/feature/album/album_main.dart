@@ -2,9 +2,9 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/string.dart';
-import 'album_new_post.dart';
 import 'friend_album.dart';
 import 'my_album.dart';
+import 'new_album_post.dart';
 
 class AlbumMain extends StatefulWidget {
   const AlbumMain({super.key});
