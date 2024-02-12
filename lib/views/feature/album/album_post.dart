@@ -58,7 +58,9 @@ class AlbumPost extends StatelessWidget {
                                 children: [
                                   // Back Screen Button here
                                   GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
                                     child: const Padding(
                                       padding: EdgeInsets.all(20),
                                       child: Icon(

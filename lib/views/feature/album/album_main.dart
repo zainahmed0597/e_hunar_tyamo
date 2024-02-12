@@ -1,8 +1,8 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-
 import '../../../utils/colors.dart';
 import '../../../utils/string.dart';
+import 'album_new_post.dart';
 import 'friend_album.dart';
 import 'my_album.dart';
 
@@ -87,7 +87,14 @@ class _AlbumMainState extends State<AlbumMain> with SingleTickerProviderStateMix
           elevation: 5,
           backgroundColor: gradient31,
           shape: const CircleBorder(),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const NewAlbumPost(),
+              ),
+            );
+          },
           child: Icon(
             Icons.add,
             color: gradient32,
