@@ -196,3 +196,5 @@ String copy = 'Copy';
 String edit = 'Edit';
 String blabla = 'text here bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla';
 String comment = 'Comment';
+String comment1 = 'This is my comment';
+String oneMinAgo = '1 min ago';
